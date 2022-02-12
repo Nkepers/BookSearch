@@ -15,11 +15,7 @@ const resolvers = {
             }
 
             throw new AuthenticationError('Not logged in');
-        },
-        savedBooks: async (parent, { authors }) => {
-            const params = authors ? { authors } : {};
-            return Book.find(params).sort({ createdAt: -1 });
-        },
+        }
     },
 
     //                                                                              <-----Mutations start here
